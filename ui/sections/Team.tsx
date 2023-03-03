@@ -1,3 +1,10 @@
+import Heading from "../components/Heading";
+import Section from "../components/Section";
+
 export default function Team() {
-  return <div>Team</div>;
+  return (
+    <Section id="Team">
+      <Heading>Team</Heading>
+    </Section>
+  );
 }

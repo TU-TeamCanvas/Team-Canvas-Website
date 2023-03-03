@@ -1,3 +1,4 @@
+import Footer from "../ui/components/Footer";
 import Client from "../ui/sections/Client";
 import Hero from "../ui/sections/Hero";
 import Lessons from "../ui/sections/Lessons";
@@ -16,6 +17,7 @@ export default function Home() {
       <Project />
       <Tech />
       <Lessons />
+      <Footer />
     </>
   );
 }

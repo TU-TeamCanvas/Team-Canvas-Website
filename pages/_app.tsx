@@ -2,7 +2,7 @@ import { MantineProvider } from "@mantine/core";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 
-import theme from "../theme";
+import { theme } from "../theme";
 
 export default function App(props: AppProps) {
   const { Component, pageProps } = props;

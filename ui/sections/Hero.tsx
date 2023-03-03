@@ -1,3 +1,10 @@
+import Heading from "../components/Heading";
+import Section from "../components/Section";
+
 export default function Hero() {
-  return <div>Hero</div>;
+  return (
+    <Section id="Hero">
+      <Heading>Hero</Heading>
+    </Section>
+  );
 }
