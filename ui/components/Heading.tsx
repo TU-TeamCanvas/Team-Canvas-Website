@@ -11,6 +11,7 @@ export default function Heading({ children }: { children: string }) {
       size="4em"
       align="center"
       mt="sm"
+      mb="xl"
     >
       {children}
     </Title>
