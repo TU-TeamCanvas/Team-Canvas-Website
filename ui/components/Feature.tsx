@@ -1,4 +1,4 @@
-import { Flex, Group, Text, Title, Image, Paper } from "@mantine/core";
+import { Flex, Text, Title, Image, Paper, Stack } from "@mantine/core";
 
 export default function Feature({
   title,
@@ -12,13 +12,17 @@ export default function Feature({
   reversed: boolean;
 }) {
   return (
-    <Paper shadow="md" radius="xl" p="sm" m="md">
+    <Paper shadow="md" radius="xl" p="lg" m="xl">
       <Flex direction={reversed ? "row-reverse" : "row"}>
-        <Group sx={{ flex: 70 }}>
-          <Title>{title}</Title>
-          <Text fw={500}>{description}</Text>
-        </Group>
-        <Image src={imageUrl} alt="" w="20%" sx={{ flex: 30 }} />
+        <Stack sx={{ flex: 60 }}>
+          <Title ml="xl" mr="xl" mt="lg">
+            {title}
+          </Title>
+          <Text ml="xl" mr="xl" fw={500}>
+            {description}
+          </Text>
+        </Stack>
+        <Image src={imageUrl} alt="" w="20%" sx={{ flex: 40 }} />
       </Flex>
     </Paper>
   );

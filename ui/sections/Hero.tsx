@@ -1,51 +1,67 @@
-import { Grid, Image, Title, Text, List, Box } from "@mantine/core";
+import { Grid, Box, Title, Text, List, ThemeIcon } from "@mantine/core";
+import { IconCircleCheck, IconCurrencyDollar } from "@tabler/icons-react";
 
-import Heading from "../components/Heading";
 import Section from "../components/Section";
 
 export default function Hero() {
   return (
     <Box
       sx={{
-        backgroundImage: "url(light-bulb-ideas-creative-diagram-concept.jpg)",
+        backgroundImage: "url(scrum.png)",
         backgroundSize: "cover",
         backgroundPosition: "center center",
         backgroundRepeat: "no-repeat",
       }}
     >
       <Section id="Hero">
-        <Heading>Project Canvas</Heading>
         <Grid columns={100} w="100%">
-          <Grid.Col span={70}>
+          <Grid.Col span={60}>
             <Title
               variant="gradient"
-              gradient={{ from: "cyan", to: "lime", deg: 10 }}
-              mb="xl"
+              gradient={{ from: "cyan", to: "lime", deg: 80 }}
+              fz="80px"
+              mt="100px"
             >
-              Introduction
+              Project Canvas
             </Title>
-            <List withPadding size="xl">
-              <List.Item>
-                <Text mb="md" fz="xl" fw={500}>
-                  The aim of this project is to develop a new interface for
-                  organising Product Backlog Items (PBIs) for software projects
-                  at MaibornWolff.
-                </Text>
+
+            <Text size="sm" mb="xl">
+              The new interface for organising Product Backlog Items (PBIs) for
+              software projects at MaibornWolff that address the issues with the
+              currently used project management tool, Atlassian Jira.
+            </Text>
+            <List
+              mt="50px"
+              ml="70px"
+              spacing="xs"
+              size="xl"
+              center
+              icon={
+                <ThemeIcon color="teal" size={24} radius="xl">
+                  <IconCircleCheck size="1rem" />
+                </ThemeIcon>
+              }
+            >
+              <List.Item fw={500}>
+                Better organise, prioritise, and visualise PBIs.
               </List.Item>
-              <List.Item>
-                <Text fz="xl" fw={500}>
-                  This interface will address the issues with the currently used
-                  project management tool, Atlassian Jira, by providing custom
-                  features and improved usability at a lower cost. This will
-                  enable the Scrum team to better organise, prioritise, and
-                  visualise PBIs.
-                </Text>
+              <List.Item fw={500}>
+                More intuitive and flexible tool for managing software projects
+              </List.Item>
+
+              <List.Item
+                icon={
+                  <ThemeIcon color="teal" size={24} radius="xl">
+                    <IconCurrencyDollar size="1rem" />
+                  </ThemeIcon>
+                }
+                fw={500}
+              >
+                Custom features and improved usability at a lower cost
               </List.Item>
             </List>
           </Grid.Col>
-          <Grid.Col span={30}>
-            <Image src="project_canvas_logo.svg" alt="Canvas logo" />
-          </Grid.Col>
+          <Grid.Col span={40} />
         </Grid>
       </Section>
     </Box>
