@@ -17,13 +17,13 @@ export default function Hero() {
       <Section id="Hero">
         <Grid columns={100} w="100%">
           <Grid.Col span={60}>
-            <Title
-              variant="gradient"
-              gradient={{ from: "cyan", to: "lime", deg: 80 }}
-              fz="80px"
-              mt="100px"
-            >
-              Project Canvas
+            <Title fz="80px" mt="100px">
+              <Text
+                variant="gradient"
+                gradient={{ from: "cyan", to: "lime", deg: 80 }}
+              >
+                Project Canvas
+              </Text>
             </Title>
 
             <Text size="sm" mb="xl">

@@ -9,12 +9,8 @@ export default function Client() {
       <Heading>Client</Heading>
       <Grid columns={100} w="100%">
         <Grid.Col span={70}>
-          <Title
-            variant="gradient"
-            gradient={{ from: "pink", to: "red", deg: 100 }}
-            mb="xl"
-          >
-            <a href="https://www.maibornwolff.de/">Mailborn Wolff</a>
+          <Title color="pink" mb="xl">
+            Mailborn Wolff
           </Title>
           <List withPadding size="xl" mb="xl">
             <List.Item>
