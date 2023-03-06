@@ -1,5 +1,6 @@
-import { Grid, Box, Title, Text, List, ThemeIcon } from "@mantine/core";
+import { Grid, Box, Title, Text, List, ThemeIcon, Button } from "@mantine/core";
 import { IconCircleCheck, IconCurrencyDollar } from "@tabler/icons-react";
+import { Link } from "react-scroll";
 
 import Section from "../components/Section";
 
@@ -60,6 +61,11 @@ export default function Hero() {
                 Custom features and improved usability at a lower cost
               </List.Item>
             </List>
+            <Button color="cyan" radius="xl" ml="70px" mt="xl">
+              <Link activeClass="active" to="Description" spy smooth>
+                View More
+              </Link>
+            </Button>
           </Grid.Col>
           <Grid.Col span={40} />
         </Grid>

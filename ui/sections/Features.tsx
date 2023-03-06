@@ -2,7 +2,7 @@ import Feature from "../components/Feature";
 import Heading from "../components/Heading";
 import Section from "../components/Section";
 
-export default function Project() {
+export default function Features() {
   const features = [
     {
       title: "Login",
@@ -41,7 +41,7 @@ export default function Project() {
     },
   ];
   return (
-    <Section id="Project">
+    <Section id="Features">
       <Heading>Features</Heading>
       {features.map((feature) => {
         return (
