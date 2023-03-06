@@ -75,8 +75,6 @@ export default function Lessons() {
     },
   }));
 
-  const placeholder =
-    "It can’t help but hear a pin drop from over half a mile away, so it lives deep in the mountains where there aren’t many people or Pokémon.It was born from sludge on the ocean floor. In a sterile environment, the germs within its body can’t multiply, and it dies.It has no eyeballs, so it can’t see. It checks its surroundings via the ultrasonic waves it emits from its mouth.";
   const { classes } = useStyles();
 
   return (
@@ -86,7 +84,7 @@ export default function Lessons() {
         <Container w="100%">
           <Accordion
             chevronPosition="right"
-            defaultValue="reset-password"
+            defaultValue="requirements"
             chevronSize={50}
             variant="separated"
             disableChevronRotation
@@ -96,39 +94,75 @@ export default function Lessons() {
               </ThemeIcon>
             }
           >
-            <Accordion.Item className={classes.item} value="reset-password">
+            <Accordion.Item className={classes.item} value="requirements">
               <Accordion.Control>
-                How can I reset my password?
+                How to write clear Software Requirements Specification ?
               </Accordion.Control>
-              <Accordion.Panel>{placeholder}</Accordion.Panel>
+              <Accordion.Panel>
+                After experiecing a real life example of misunderstanding with
+                our client we learned that Clear, concise, and executable
+                requirements help development teams build high quality products
+                that do what they are supposed to do. So we changed our process
+                into giving more time and effort to discuss our clients
+                requirement and defining acceptance criterea to avoid all form
+                of misunderstanding
+              </Accordion.Panel>
             </Accordion.Item>
 
-            <Accordion.Item className={classes.item} value="another-account">
+            <Accordion.Item className={classes.item} value="communication">
               <Accordion.Control>
-                Can I create more that one account?
+                How to communicate and share with your team members for better
+                team work ?
               </Accordion.Control>
-              <Accordion.Panel>{placeholder}</Accordion.Panel>
+              <Accordion.Panel>
+                We learned that effective communication between team members is
+                critical to the success of any software engineering project.
+                That s why our team ensured that we regularly communicate with
+                each other and that everyone is aware of his responsibilities.
+              </Accordion.Panel>
             </Accordion.Item>
 
-            <Accordion.Item className={classes.item} value="newsletter">
+            <Accordion.Item className={classes.item} value="feedback">
               <Accordion.Control>
-                How can I subscribe to monthly newsletter?
+                How to be open to feedback and learn from mistakes?
               </Accordion.Control>
-              <Accordion.Panel>{placeholder}</Accordion.Panel>
+              <Accordion.Panel>
+                After reviewing each others work we learned that Feedback can
+                help us improve our work and identify areas where we need to
+                focus our efforts. Mistakes are inevitable in software
+                engineering projects.Thats why we invested time in reviews and
+                feedback to ensure a better code quality for our client.
+              </Accordion.Panel>
             </Accordion.Item>
 
-            <Accordion.Item className={classes.item} value="credit-card">
+            <Accordion.Item className={classes.item} value="time">
               <Accordion.Control>
-                Do you store credit card information securely?
+                How to manage time along with the development process ?
               </Accordion.Control>
-              <Accordion.Panel>{placeholder}</Accordion.Panel>
+              <Accordion.Panel>
+                Time management is critical in software engineering projects
+                becaus ewe had tight deadlines, complex tasks, and multiple team
+                members working on different parts of the project. Effective
+                time management helped us ensure that we complete our work on
+                time and that our work is of high quality. Effective time
+                management involves setting clear goals and priorities, breaking
+                down tasks into manageable pieces, estimating the time required
+                for each task, and allocating time accordingly.
+              </Accordion.Panel>
             </Accordion.Item>
 
-            <Accordion.Item className={classes.item} value="payment">
+            <Accordion.Item className={classes.item} value="fun">
               <Accordion.Control>
-                What payment systems to you work with?
+                How to have fun along with the project process ?
               </Accordion.Control>
-              <Accordion.Panel>{placeholder}</Accordion.Panel>
+              <Accordion.Panel>
+                Although our project seemed to be challenging and required a
+                significant amount of time and effort, we felt that it can also
+                be exciting and enjoyable when we approached it with the right
+                mindset. Having fun helped us stay motivated and engaged with
+                the project, allowing us to approach our work with a positive
+                attitude.
+              </Accordion.Panel>
             </Accordion.Item>
           </Accordion>
         </Container>
