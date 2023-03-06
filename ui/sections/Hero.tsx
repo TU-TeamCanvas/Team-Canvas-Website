@@ -61,7 +61,13 @@ export default function Hero() {
                 Custom features and improved usability at a lower cost
               </List.Item>
             </List>
-            <Button color="cyan" radius="xl" ml="70px" mt="xl">
+            <Button
+              variant="gradient"
+              gradient={{ from: "teal", to: "lime", deg: 105 }}
+              radius="xl"
+              ml="70px"
+              mt="xl"
+            >
               <Link activeClass="active" to="Description" spy smooth>
                 View More
               </Link>
