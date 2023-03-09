@@ -1,11 +1,12 @@
+/* eslint-disable react/no-unescaped-entities */
 import {
+  Accordion,
+  Container,
   createStyles,
   MantineProvider,
-  Container,
-  Accordion,
   ThemeIcon,
 } from "@mantine/core";
-import { IconPlus } from "@tabler/icons-react";
+import { IconChevronDown } from "@tabler/icons-react";
 
 import Heading from "../components/Heading";
 import Section from "../components/Section";
@@ -34,7 +35,7 @@ export default function Lessons() {
       backgroundColor: theme.white,
       borderBottom: 0,
       borderRadius: theme.radius.md,
-      boxShadow: theme.shadows.lg,
+      boxShadow: theme.shadows.md,
       overflow: "hidden",
     },
 
@@ -90,29 +91,29 @@ export default function Lessons() {
             disableChevronRotation
             chevron={
               <ThemeIcon radius="xl" className={classes.gradient} size={32}>
-                <IconPlus size="1.05rem" stroke={1.5} />
+                <IconChevronDown size="1.05rem" stroke={1.5} />
               </ThemeIcon>
             }
           >
             <Accordion.Item className={classes.item} value="requirements">
               <Accordion.Control>
-                How to write clear Software Requirements Specification ?
+                How to write clear Software Requirements Specification?
               </Accordion.Control>
               <Accordion.Panel>
                 After experiecing a real life example of misunderstanding with
-                our client we learned that Clear, concise, and executable
+                our client we learned that clear, concise, and executable
                 requirements help development teams build high quality products
                 that do what they are supposed to do. So we changed our process
                 into giving more time and effort to discuss our clients
                 requirement and defining acceptance criterea to avoid all form
-                of misunderstanding
+                of misunderstanding.
               </Accordion.Panel>
             </Accordion.Item>
 
             <Accordion.Item className={classes.item} value="communication">
               <Accordion.Control>
                 How to communicate and share with your team members for better
-                team work ?
+                team work?
               </Accordion.Control>
               <Accordion.Panel>
                 We learned that effective communication between team members is
@@ -130,18 +131,18 @@ export default function Lessons() {
                 After reviewing each others work we learned that Feedback can
                 help us improve our work and identify areas where we need to
                 focus our efforts. Mistakes are inevitable in software
-                engineering projects.Thats why we invested time in reviews and
+                engineering projects, that's why we invested time in reviews and
                 feedback to ensure a better code quality for our client.
               </Accordion.Panel>
             </Accordion.Item>
 
             <Accordion.Item className={classes.item} value="time">
               <Accordion.Control>
-                How to manage time along with the development process ?
+                How to manage time during with the development process?
               </Accordion.Control>
               <Accordion.Panel>
                 Time management is critical in software engineering projects
-                becaus ewe had tight deadlines, complex tasks, and multiple team
+                because we had tight deadlines, complex tasks, and multiple team
                 members working on different parts of the project. Effective
                 time management helped us ensure that we complete our work on
                 time and that our work is of high quality. Effective time
@@ -153,7 +154,7 @@ export default function Lessons() {
 
             <Accordion.Item className={classes.item} value="fun">
               <Accordion.Control>
-                How to have fun along with the project process ?
+                How to have fun along with the project process?
               </Accordion.Control>
               <Accordion.Panel>
                 Although our project seemed to be challenging and required a

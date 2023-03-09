@@ -12,6 +12,7 @@ export default function Heading({ children }: { children: string }) {
       align="center"
       mt="sm"
       mb="xl"
+      color="secondary.2"
     >
       {children}
     </Title>

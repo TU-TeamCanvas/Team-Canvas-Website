@@ -20,7 +20,7 @@ export default function Hero() {
             <Title fz="80px" mt="100px">
               <Text
                 variant="gradient"
-                gradient={{ from: "cyan", to: "lime", deg: 80 }}
+                gradient={{ from: "primaryBlue", to: "primaryGreen", deg: 80 }}
               >
                 Project Canvas
               </Text>
@@ -63,7 +63,7 @@ export default function Hero() {
             </List>
             <Button
               variant="gradient"
-              gradient={{ from: "teal", to: "lime", deg: 105 }}
+              gradient={{ from: "primaryBlue", to: "primaryGreen", deg: 105 }}
               radius="xl"
               ml="70px"
               mt="xl"

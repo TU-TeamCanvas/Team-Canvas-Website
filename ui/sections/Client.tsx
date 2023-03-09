@@ -9,8 +9,8 @@ export default function Client() {
       <Heading>Client</Heading>
       <Grid columns={100} w="100%">
         <Grid.Col span={70}>
-          <Title color="pink" mb="xl">
-            Mailborn Wolff
+          <Title color="primaryRed.4" mb="xl">
+            MailbornWolff GmbH
           </Title>
           <List withPadding size="xl" mb="xl">
             <List.Item>
@@ -31,7 +31,7 @@ export default function Client() {
             </List.Item>
           </List>
           <Button
-            color="pink"
+            color="primaryRed.4"
             radius="xl"
             ml="xl"
             onClick={() => {
