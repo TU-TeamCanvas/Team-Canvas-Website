@@ -22,7 +22,7 @@ export default function Gallery() {
       >
         <Carousel.Slide>
           <Image
-            src="project_canvas_logo.svg"
+            src="https://github.com/TU-TeamCanvas/Team-Canvas-Website/blob/main/public/Photos/photo1.jpg"
             alt=""
             w="20%"
             sx={{ flex: 40 }}
