@@ -40,7 +40,8 @@ export function HeaderMiddle() {
         alt=""
         height="70px"
         width="70px"
-        mr="90px"
+        mr="70px"
+        ml="50px"
       />
 
       <Group spacing={30} sx={{ justifyContent: "center" }}>
