@@ -22,7 +22,7 @@ export default function Gallery() {
       <Heading>Gallery</Heading>
       <Carousel
         withIndicators
-        w="1500px"
+        w="1200px"
         slideSize="33.33333333%"
         slideGap="sm"
         loop
@@ -34,7 +34,7 @@ export default function Gallery() {
       >
         {imageURls.map((url) => (
           <Carousel.Slide key={url}>
-            <Image src={url} alt="" height="500px" width="500px" />
+            <Image src={url} alt="" height="400px" width="400px" />
           </Carousel.Slide>
         ))}
       </Carousel>

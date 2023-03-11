@@ -26,14 +26,23 @@ export function HeaderMiddle() {
   ));
 
   return (
-    <Group h={80} sx={{ position: "fixed" }} w="100%">
+    <Group
+      h={80}
+      sx={{
+        position: "fixed",
+        background: "linear-gradient(180deg, #D3D3D3 20%, white 100%)",
+        zIndex: 10,
+      }}
+      w="100%"
+    >
       <Image
         src="canvas_logo_icon.svg"
         alt=""
         height="70px"
         width="70px"
-        mr="50px"
+        mr="90px"
       />
+
       <Group spacing={30} sx={{ justifyContent: "center" }}>
         {items}
       </Group>

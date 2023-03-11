@@ -45,8 +45,8 @@ export default function Client() {
           <Image
             src="MW_LOGO_RGB_color_auf_weiss.svg"
             alt="Canvas logo"
-            width="300px"
-            height="300px"
+            width="500px"
+            height="500px"
           />
         </Grid.Col>
       </Grid>
