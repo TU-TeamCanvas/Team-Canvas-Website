@@ -22,9 +22,9 @@ export default function Gallery() {
       <Heading>Gallery</Heading>
       <Carousel
         withIndicators
-        w="100%"
-        slideSize="40%"
-        slideGap="md"
+        w="1500px"
+        slideSize="33.33333333%"
+        slideGap="sm"
         loop
         align="start"
         breakpoints={[

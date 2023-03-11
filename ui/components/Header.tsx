@@ -26,7 +26,7 @@ export function HeaderMiddle() {
   ));
 
   return (
-    <Group h={80} sx={{ position: "fixed" }} p="md" w="100%">
+    <Group h={80} sx={{ position: "fixed" }} w="100%">
       <Image
         src="canvas_logo_icon.svg"
         alt=""
