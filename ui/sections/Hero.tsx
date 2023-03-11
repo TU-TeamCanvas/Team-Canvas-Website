@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <Box
       sx={{
-        backgroundImage: "url(scrum.png)",
+        backgroundImage: "url(canvasBG.png)",
         backgroundSize: "cover",
         backgroundPosition: "center center",
         backgroundRepeat: "no-repeat",

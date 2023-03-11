@@ -1,4 +1,5 @@
 import Footer from "../ui/components/Footer";
+import { HeaderMiddle } from "../ui/components/Header";
 import Client from "../ui/sections/Client";
 import Description from "../ui/sections/Description";
 import Features from "../ui/sections/Features";
@@ -12,6 +13,7 @@ import Tech from "../ui/sections/Tech";
 export default function Home() {
   return (
     <>
+      <HeaderMiddle />
       <Hero />
       <Team />
       <Client />

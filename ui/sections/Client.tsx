@@ -42,7 +42,12 @@ export default function Client() {
           </Button>
         </Grid.Col>
         <Grid.Col span={30}>
-          <Image src="MailbornWolffLogo.png" alt="Canvas logo" />
+          <Image
+            src="MW_LOGO_RGB_color_auf_weiss.svg"
+            alt="Canvas logo"
+            width="300px"
+            height="300px"
+          />
         </Grid.Col>
       </Grid>
     </Section>
