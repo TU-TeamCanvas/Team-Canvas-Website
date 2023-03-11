@@ -5,13 +5,25 @@ import Heading from "../components/Heading";
 import Section from "../components/Section";
 
 export default function Gallery() {
+  const imageURls = [
+    "../../Photos/photo1.jpg",
+    "../../Photos/photo11.jpg",
+    "../../Photos/photo2.jpg",
+    "../../Photos/photo3.jpg",
+    "../../Photos/photo4.jpg",
+    "../../Photos/photo6.jpg",
+    "../../Photos/photo7.jpg",
+    "../../Photos/photo8.jpg",
+    "../../Photos/photo9.jpg",
+    "../../Photos/photo10.jpg",
+  ];
   return (
     <Section id="Gallery">
       <Heading>Gallery</Heading>
       <Carousel
         withIndicators
         w="100%"
-        slideSize="33.333333%"
+        slideSize="40%"
         slideGap="md"
         loop
         align="start"
@@ -20,47 +32,11 @@ export default function Gallery() {
           { maxWidth: "sm", slideSize: "100%", slideGap: 0 },
         ]}
       >
-        <Carousel.Slide>
-          <Image
-            src="https://github.com/TU-TeamCanvas/Team-Canvas-Website/blob/main/public/Photos/photo1.jpg"
-            alt=""
-            w="20%"
-            sx={{ flex: 40 }}
-          />
-        </Carousel.Slide>
-        <Carousel.Slide>
-          <Image
-            src="project_canvas_logo.svg"
-            alt=""
-            w="20%"
-            sx={{ flex: 40 }}
-          />
-        </Carousel.Slide>
-        <Carousel.Slide>
-          <Image
-            src="project_canvas_logo.svg"
-            alt=""
-            w="20%"
-            sx={{ flex: 40 }}
-          />
-        </Carousel.Slide>
-        <Carousel.Slide>
-          <Image
-            src="project_canvas_logo.svg"
-            alt=""
-            w="20%"
-            sx={{ flex: 40 }}
-          />
-        </Carousel.Slide>
-
-        <Carousel.Slide>
-          <Image
-            src="project_canvas_logo.svg"
-            alt=""
-            w="20%"
-            sx={{ flex: 40 }}
-          />
-        </Carousel.Slide>
+        {imageURls.map((url) => (
+          <Carousel.Slide key={url}>
+            <Image src={url} alt="" height="500px" width="500px" />
+          </Carousel.Slide>
+        ))}
       </Carousel>
     </Section>
   );
