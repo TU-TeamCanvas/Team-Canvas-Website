@@ -1,4 +1,11 @@
-import { Avatar, Text, Paper, Group } from "@mantine/core";
+import { Avatar, Text, Paper, Group, ThemeIcon, Stack } from "@mantine/core";
+import {
+  IconArchive,
+  IconCircleCheckFilled,
+  IconFlag2Filled,
+  IconMessages,
+  IconTargetArrow,
+} from "@tabler/icons-react";
 
 import Heading from "../components/Heading";
 import Section from "../components/Section";
@@ -8,6 +15,7 @@ interface UserInfoActionProps {
   name: string;
   email: string;
   job: string;
+  icon: JSX.Element;
 }
 
 export function UserInfoAction({
@@ -15,12 +23,12 @@ export function UserInfoAction({
   name,
   email,
   job,
+  icon,
 }: UserInfoActionProps) {
   return (
     <Paper
       radius="md"
       withBorder
-      p="lg"
       sx={(theme) => ({
         backgroundColor:
           theme.colorScheme === "dark" ? theme.colors.dark[8] : theme.white,
@@ -28,21 +36,28 @@ export function UserInfoAction({
       h="400px"
       w="500px"
     >
-      <Avatar src={avatar} size={240} radius={120} mx="auto" mt="xl" />
-      <Text ta="center" fz="lg" weight={500} mt="xl">
-        {name}
-      </Text>
-      <Text ta="center" c="dimmed" fz="sm">
-        {email}
-      </Text>
-      <Text
-        ta="center"
-        variant="gradient"
-        gradient={{ from: "primaryBlue", to: "primaryGreen", deg: 80 }}
-        fz="sm"
-      >
-        {job}
-      </Text>
+      <Stack spacing="sm">
+        <Avatar src={avatar} size={240} radius={120} mx="auto" mt="xl" />
+        <Text ta="center" fz="lg" weight={500} mt="xl">
+          {name}
+        </Text>
+        <Text ta="center" c="dimmed" fz="sm">
+          {email}
+        </Text>
+        <Group
+          sx={{
+            justifyContent: "center",
+            background: "linear-gradient(80deg, #00B0D7 0%, #07F520 100%);",
+          }}
+        >
+          <ThemeIcon variant="outline" c="#FFFFFF">
+            {icon}
+          </ThemeIcon>
+          <Text ta="center" color="#FFFFFF" fz="md">
+            {job}
+          </Text>
+        </Group>
+      </Stack>
     </Paper>
   );
 }
@@ -52,24 +67,28 @@ const teamMembers = [
     name: "Alexander Hartmann",
     email: "example@gmail.com",
     job: "Quality Assurance",
+    icon: <IconCircleCheckFilled />,
   },
   {
     avatar: "../../Team/Enrico.png",
-    name: "Enrico",
+    name: "Enrico Chies",
     email: "example@gmail.com",
     job: "Communicator",
+    icon: <IconMessages />,
   },
   {
     avatar: "../../Team/Ihsen.png",
     name: "Ihsen Bouallegue",
-    email: "example@gmail.com",
+    email: "bouallegueihsen@gmail.com",
     job: "Team Leader",
+    icon: <IconFlag2Filled />,
   },
   {
     avatar: "../../Team/Oussema.png",
     name: "Oussema Masmoudi",
     email: "gib.masmoudi@gmail.com",
     job: "Ressource Manager",
+    icon: <IconArchive />,
   },
 
   {
@@ -77,6 +96,7 @@ const teamMembers = [
     name: "Christian Huetter",
     email: "example@gmail.com",
     job: "Scrum Master",
+    icon: <IconTargetArrow />,
   },
 ];
 export default function Team() {
@@ -91,6 +111,7 @@ export default function Team() {
             email={user.email}
             job={user.job}
             key={user.name}
+            icon={user.icon}
           />
         ))}
       </Group>
