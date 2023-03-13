@@ -72,7 +72,7 @@ const teamMembers = [
   {
     avatar: "../../Team/Enrico.png",
     name: "Enrico Chies",
-    email: "example@gmail.com",
+    email: "bic.chies@gmail.com",
     job: "Communicator",
     icon: <IconMessages />,
   },
