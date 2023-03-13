@@ -1,4 +1,4 @@
-import { Avatar, Text, Paper, Group, ThemeIcon, Stack } from "@mantine/core";
+import { Avatar, Text, Paper, Group, ThemeIcon } from "@mantine/core";
 import {
   IconArchive,
   IconCircleCheckFilled,
