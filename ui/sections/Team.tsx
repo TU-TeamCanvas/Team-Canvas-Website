@@ -36,28 +36,26 @@ export function UserInfoAction({
       h="400px"
       w="500px"
     >
-      <Stack spacing="sm">
-        <Avatar src={avatar} size={240} radius={120} mx="auto" mt="xl" />
-        <Text ta="center" fz="lg" weight={500} mt="xl">
-          {name}
+      <Avatar src={avatar} size={240} radius={120} mx="auto" mt="xl" />
+      <Text ta="center" fz="lg" weight={500} mt="xl">
+        {name}
+      </Text>
+      <Text ta="center" c="dimmed" fz="sm" mb="md">
+        {email}
+      </Text>
+      <Group
+        sx={{
+          justifyContent: "center",
+          background: "linear-gradient(80deg, #00B0D7 0%, #07F520 100%);",
+        }}
+      >
+        <ThemeIcon variant="outline" c="#FFFFFF">
+          {icon}
+        </ThemeIcon>
+        <Text ta="center" color="#FFFFFF" fz="md">
+          {job}
         </Text>
-        <Text ta="center" c="dimmed" fz="sm">
-          {email}
-        </Text>
-        <Group
-          sx={{
-            justifyContent: "center",
-            background: "linear-gradient(80deg, #00B0D7 0%, #07F520 100%);",
-          }}
-        >
-          <ThemeIcon variant="outline" c="#FFFFFF">
-            {icon}
-          </ThemeIcon>
-          <Text ta="center" color="#FFFFFF" fz="md">
-            {job}
-          </Text>
-        </Group>
-      </Stack>
+      </Group>
     </Paper>
   );
 }
