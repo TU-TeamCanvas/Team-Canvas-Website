@@ -23,18 +23,15 @@ export default function Gallery() {
       <Carousel
         withIndicators
         w="1200px"
-        slideSize="33.33333333%"
+        slideSize="50%"
         slideGap="sm"
-        loop
         align="start"
-        breakpoints={[
-          { maxWidth: "md", slideSize: "50%" },
-          { maxWidth: "sm", slideSize: "100%", slideGap: 0 },
-        ]}
+        dragFree
+        loop
       >
         {imageURls.map((url) => (
           <Carousel.Slide key={url}>
-            <Image src={url} alt="" height="400px" width="400px" />
+            <Image src={url} alt="" height="600px" width="600px" />
           </Carousel.Slide>
         ))}
       </Carousel>

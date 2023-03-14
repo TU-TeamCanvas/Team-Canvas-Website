@@ -1,4 +1,5 @@
-import { Avatar, Text, Paper, Group, ThemeIcon } from "@mantine/core";
+import { Carousel } from "@mantine/carousel";
+import { Avatar, Text, Paper, Group, ThemeIcon, Box } from "@mantine/core";
 import {
   IconArchive,
   IconCircleCheckFilled,
@@ -26,16 +27,7 @@ export function UserInfoAction({
   icon,
 }: UserInfoActionProps) {
   return (
-    <Paper
-      radius="md"
-      withBorder
-      sx={(theme) => ({
-        backgroundColor:
-          theme.colorScheme === "dark" ? theme.colors.dark[8] : theme.white,
-      })}
-      h="400px"
-      w="500px"
-    >
+    <Paper radius="md" withBorder w={269}>
       <Avatar src={avatar} size={240} radius={120} mx="auto" mt="xl" />
       <Text ta="center" fz="lg" weight={500} mt="xl">
         {name}
@@ -70,7 +62,7 @@ const teamMembers = [
   {
     avatar: "../../Team/Enrico.png",
     name: "Enrico Chies",
-    email: "bic.chies@gmail.com",
+    email: "enrico.chies@stud.tu-darmstadt.de",
     job: "Communicator",
     icon: <IconMessages />,
   },
@@ -100,19 +92,29 @@ const teamMembers = [
 export default function Team() {
   return (
     <Section id="Team">
-      <Heading>Team</Heading>
-      <Group w="1400px" grow>
-        {teamMembers.map((user) => (
-          <UserInfoAction
-            avatar={user.avatar}
-            name={user.name}
-            email={user.email}
-            job={user.job}
-            key={user.name}
-            icon={user.icon}
-          />
-        ))}
-      </Group>
+      <Box>
+        <Heading>Team</Heading>
+        <Carousel
+          slideGap="xs"
+          slideSize="25%"
+          align="center"
+          dragFree
+          loop
+          slidesToScroll={4}
+        >
+          {teamMembers.map((user) => (
+            <Carousel.Slide key={user.name}>
+              <UserInfoAction
+                avatar={user.avatar}
+                name={user.name}
+                email={user.email}
+                job={user.job}
+                icon={user.icon}
+              />
+            </Carousel.Slide>
+          ))}
+        </Carousel>
+      </Box>
     </Section>
   );
 }

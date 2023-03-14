@@ -16,20 +16,24 @@ export default function Tech() {
   const getChild = (
     height: number,
     technologyLogo: string,
-    technologyName: string
+    technologyName: string,
+    url: string
   ) => (
     <Paper
       h={height}
       radius="md"
       bg={theme.colors.gray[2]}
+      onClick={() => {
+        window.open(url);
+      }}
       sx={{
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         ":hover": {
-          transition: "background-color .35s ease",
           background: "linear-gradient(80deg, #00B0D7 0%, #07F520 100%)",
           cursor: "pointer",
+          transition: "background 0.3s ease-in-out",
         },
       }}
     >
@@ -58,37 +62,52 @@ export default function Tech() {
       <Heading>Tech</Heading>
       <Container my="md" w="1000px">
         <SimpleGrid cols={4} breakpoints={[{ maxWidth: "xs", cols: 1 }]}>
-          {getChild(BASE_HEIGHT, "reactLogo.png", "React")}
+          {getChild(
+            BASE_HEIGHT,
+            "reactLogo.png",
+            "React",
+            "https://reactjs.org/"
+          )}
           <Stack>
             {getChild(
               getSubHeight(2, px(theme.spacing.md)),
               "typeScriptLogo.png",
-              "TypeScript"
+              "TypeScript",
+              "https://www.typescriptlang.org/"
             )}
             {getChild(
               getSubHeight(2, px(theme.spacing.md)),
               "ElectronLogo.png",
-              "Electron"
+              "Electron",
+              "https://www.electronjs.org/"
             )}
           </Stack>
           <Stack>
             {getChild(
               getSubHeight(3, px(theme.spacing.md)),
               "MantineLogo.png",
-              "Mantine"
+              "Mantine",
+              "https://mantine.dev/"
             )}
             {getChild(
               getSubHeight(3, px(theme.spacing.md)),
               "FastifyLogo.png",
-              "Fastify"
+              "Fastify",
+              "https://www.fastify.io/"
             )}
             {getChild(
               getSubHeight(3, px(theme.spacing.md)),
               "PlaywrightLogo.png",
-              "Playwright"
+              "Playwright",
+              "https://playwright.dev/"
             )}
           </Stack>
-          {getChild(BASE_HEIGHT, "yarnLogo.png", "Yarn")}
+          {getChild(
+            BASE_HEIGHT,
+            "yarnLogo.png",
+            "Yarn",
+            "https://yarnpkg.com/"
+          )}
         </SimpleGrid>
       </Container>
     </Section>

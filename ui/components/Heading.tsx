@@ -5,7 +5,7 @@ export default function Heading({ children }: { children: string }) {
     <Title
       sx={(theme) => ({
         [theme.fn.smallerThan("sm")]: {
-          fontSize: 24,
+          fontSize: "3em",
         },
       })}
       size="4em"
