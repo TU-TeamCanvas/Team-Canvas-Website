@@ -41,7 +41,7 @@ export function UserInfoAction({
           background: "linear-gradient(80deg, #00B0D7 0%, #07F520 100%);",
         }}
       >
-        <ThemeIcon variant="outline" c="#FFFFFF">
+        <ThemeIcon variant="filled" color="transparent">
           {icon}
         </ThemeIcon>
         <Text ta="center" color="#FFFFFF" fz="md">
@@ -55,7 +55,7 @@ const teamMembers = [
   {
     avatar: "../../Team/Alex.png",
     name: "Alexander Hartmann",
-    email: "example@gmail.com",
+    email: "alexander@kta-hartmann.de",
     job: "Quality Assurance",
     icon: <IconCircleCheckFilled />,
   },
@@ -84,7 +84,7 @@ const teamMembers = [
   {
     avatar: "../../Team/Christian.png",
     name: "Christian Huetter",
-    email: "example@gmail.com",
+    email: "ch-huetter@gmx.de",
     job: "Scrum Master",
     icon: <IconTargetArrow />,
   },

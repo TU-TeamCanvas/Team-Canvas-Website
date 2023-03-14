@@ -5,6 +5,8 @@ import {
   createStyles,
   MantineProvider,
   ThemeIcon,
+  Text,
+  Center,
 } from "@mantine/core";
 import { IconChevronDown } from "@tabler/icons-react";
 
@@ -85,10 +87,9 @@ export default function Lessons() {
         <Container w="100%">
           <Accordion
             chevronPosition="right"
-            defaultValue="requirements"
             chevronSize={50}
             variant="separated"
-            disableChevronRotation
+            multiple
             chevron={
               <ThemeIcon radius="xl" className={classes.gradient} size={32}>
                 <IconChevronDown size="1.05rem" stroke={1.5} />
@@ -105,7 +106,7 @@ export default function Lessons() {
                 requirements help development teams build high quality products
                 that do what they are supposed to do. So we changed our process
                 into giving more time and effort to discuss our clients
-                requirement and defining acceptance criterea to avoid all form
+                requirement and defining acceptance criteria to avoid any form
                 of misunderstanding.
               </Accordion.Panel>
             </Accordion.Item>
@@ -118,7 +119,7 @@ export default function Lessons() {
               <Accordion.Panel>
                 We learned that effective communication between team members is
                 critical to the success of any software engineering project.
-                That s why our team ensured that we regularly communicate with
+                That's why our team ensured that we regularly communicate with
                 each other and that everyone is aware of his responsibilities.
               </Accordion.Panel>
             </Accordion.Item>
@@ -130,7 +131,7 @@ export default function Lessons() {
               <Accordion.Panel>
                 After reviewing each others work we learned that Feedback can
                 help us improve our work and identify areas where we need to
-                focus our efforts. Mistakes are inevitable in software
+                focus our efforts on. Mistakes are inevitable in software
                 engineering projects, that's why we invested time in reviews and
                 feedback to ensure a better code quality for our client.
               </Accordion.Panel>
@@ -145,10 +146,10 @@ export default function Lessons() {
                 because we had tight deadlines, complex tasks, and multiple team
                 members working on different parts of the project. Effective
                 time management helped us ensure that we complete our work on
-                time and that our work is of high quality. Effective time
-                management involves setting clear goals and priorities, breaking
-                down tasks into manageable pieces, estimating the time required
-                for each task, and allocating time accordingly.
+                time and that our work is of high quality. This process involves
+                setting clear goals and priorities, breaking down tasks into
+                manageable pieces, estimating the time required for each task,
+                and allocating time accordingly.
               </Accordion.Panel>
             </Accordion.Item>
 
@@ -166,6 +167,12 @@ export default function Lessons() {
               </Accordion.Panel>
             </Accordion.Item>
           </Accordion>
+          <Center>
+            <Text mt={50} c="white">
+              Bonus easter egg 2: "You go to war with the army you get, not the
+              army you want!"
+            </Text>
+          </Center>
         </Container>
       </MantineProvider>
     </Section>

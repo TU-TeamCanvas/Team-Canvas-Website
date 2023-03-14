@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import {
   Container,
   SimpleGrid,
@@ -7,6 +8,7 @@ import {
   Text,
   Image,
   Paper,
+  Center,
 } from "@mantine/core";
 
 import Heading from "../components/Heading";
@@ -22,20 +24,20 @@ export default function Tech() {
     <Paper
       h={height}
       radius="md"
-      bg={theme.colors.gray[2]}
       onClick={() => {
         window.open(url);
       }}
-      sx={{
+      sx={(theme) => ({
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        background: theme.colors.gray[3],
+        transition: "background .3s ease",
         ":hover": {
-          background: "linear-gradient(80deg, #00B0D7 0%, #07F520 100%)",
+          background: theme.colors.primaryRed[2],
           cursor: "pointer",
-          transition: "background 0.3s ease-in-out",
         },
-      }}
+      })}
     >
       <Stack
         spacing="sm"
@@ -109,6 +111,11 @@ export default function Tech() {
             "https://yarnpkg.com/"
           )}
         </SimpleGrid>
+        <Center>
+          <Text mt={50} c="white">
+            Bonus easter egg 1: "Il buongiorno si vede dal mattino!"
+          </Text>
+        </Center>
       </Container>
     </Section>
   );
