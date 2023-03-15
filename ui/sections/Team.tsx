@@ -8,6 +8,7 @@ import {
   IconTargetArrow,
 } from "@tabler/icons-react";
 
+import { theme } from "../../theme";
 import Heading from "../components/Heading";
 import Section from "../components/Section";
 
@@ -95,12 +96,25 @@ export default function Team() {
       <Box>
         <Heading>Team</Heading>
         <Carousel
+          h={450}
           slideGap="xs"
           slideSize="25%"
           align="center"
+          withIndicators
           dragFree
           loop
-          slidesToScroll={4}
+          styles={{
+            indicator: {
+              width: 12,
+              height: 12,
+              border: "3px solid",
+              background: theme.colors?.primaryRed?.[3],
+              transition: "width 250ms ease",
+              "&[data-active]": {
+                width: 46,
+              },
+            },
+          }}
         >
           {teamMembers.map((user) => (
             <Carousel.Slide key={user.name}>

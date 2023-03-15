@@ -1,6 +1,7 @@
 import { Carousel } from "@mantine/carousel";
 import { Image } from "@mantine/core";
 
+import { theme } from "../../theme";
 import Heading from "../components/Heading";
 import Section from "../components/Section";
 
@@ -23,11 +24,24 @@ export default function Gallery() {
       <Carousel
         withIndicators
         w="1200px"
+        h={669}
         slideSize="50%"
         slideGap="sm"
         align="start"
         dragFree
         loop
+        styles={{
+          indicator: {
+            width: 12,
+            height: 12,
+            border: "3px solid",
+            background: theme.colors?.primaryRed?.[3],
+            transition: "width 250ms ease",
+            "&[data-active]": {
+              width: 46,
+            },
+          },
+        }}
       >
         {imageURls.map((url) => (
           <Carousel.Slide key={url}>
