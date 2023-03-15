@@ -168,7 +168,7 @@ export default function Lessons() {
             </Accordion.Item>
           </Accordion>
           <Center>
-            <Text mt={50} c="white">
+            <Text mt={50} c="transparent" fz={10}>
               Bonus easter egg 2: "You go to war with the army you get, not the
               army you want!"
             </Text>

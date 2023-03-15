@@ -112,7 +112,7 @@ export default function Tech() {
           )}
         </SimpleGrid>
         <Center>
-          <Text mt={50} c="white">
+          <Text mt={50} c="transparent" fz={10}>
             Bonus easter egg 1: "Il buongiorno si vede dal mattino!"
           </Text>
         </Center>
